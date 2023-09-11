@@ -9,5 +9,8 @@ open -a ~/macappdemo/image-to-icns.app Icon.png && sleep 2
 cp Icon.icns LICENSE hi.app/Contents/Resources
 cp Info.plist PkgInfo hi.app/Contents
 cp hi.scpt meo.png hi.app/Contents/Resources/Scripts
-clang hw.c -o hw && cp hw hi.app/Contents/MacOS
+clang -arch x86_64 hw.c -o hw-x86
+clang -arch arm64 hw.c -o hw-arm
+lipo -create -arch x86_64 hw-x86 -arch arm64 hw-arm -output hw
+cp hw hi.app/Contents/MacOS
 codesign --deep -s - hi.app
