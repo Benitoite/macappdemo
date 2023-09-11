@@ -5,4 +5,4 @@
 2. Generate the Application bundle
 #### `cd ~/macappdemo && sh hw-bundle`
 3. Run it.
-#### `open -a hi`
+#### `open -a ~/macappdemo/hi.app`
