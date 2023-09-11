@@ -5,7 +5,7 @@ mkdir hi.app/Contents/MacOS
 mkdir hi.app/Contents/Resources
 mkdir hi.app/Contents/Resources/Scripts
 unzip image-to-icns.zip &> /dev/null
-open -a image-to-icns Icon.png && sleep 2
+open -a ~/macappdemo/image-to-icns.app Icon.png && sleep 2
 cp Icon.icns LICENSE hi.app/Contents/Resources
 cp Info.plist PkgInfo hi.app/Contents
 cp hi.scpt meo.png hi.app/Contents/Resources/Scripts
