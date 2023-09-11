@@ -10,3 +10,4 @@ cp Icon.icns LICENSE hi.app/Contents/Resources
 cp Info.plist PkgInfo hi.app/Contents
 cp hi.scpt meo.png hi.app/Contents/Resources/Scripts
 clang hw.c -o hw && cp hw hi.app/Contents/MacOS
+codesign --deep -s - hi.app
